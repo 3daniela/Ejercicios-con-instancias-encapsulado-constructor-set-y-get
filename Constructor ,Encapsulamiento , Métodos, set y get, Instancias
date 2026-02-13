@@ -1,0 +1,58 @@
+ class Estudiante {
+
+    // Atributos privados (encapsulados)
+    private String nombre;
+    private double nota;
+
+    // Constructor
+    public Estudiante(String nombre, double nota) {
+        this.nombre = nombre;
+        setNota(nota);  // usamos el setter para validar
+    }
+
+    // Método GET para nombre
+    public String getNombre() {
+        return nombre;
+    }
+
+    // Método SET para nombre
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    // Método GET para nota
+    public double getNota() {
+        return nota;
+    }
+
+    // Método SET para nota (con validación)
+    public void setNota(double nota) {
+        if (nota >= 0 && nota <= 5) {
+            this.nota = nota;
+        } else {
+            System.out.println("La nota debe estar entre 0 y 5.");
+        }
+    }
+
+
+principal class
+
+public static void main(String[] args) {
+
+        // Crear instancias usando el constructor
+        Casa casa1 = new Casa("Blanca", 3);
+        Casa casa2 = new Casa("Azul", 5);
+
+        casa1.mostrarInfo();
+        casa2.mostrarInfo();
+
+        // Como no hay encapsulación, podemos modificar directamente
+        casa1.habitaciones = 10;
+
+        System.out.println("Después de modificar:");
+        casa1.mostrarInfo();
+    }
+
+
+
+}

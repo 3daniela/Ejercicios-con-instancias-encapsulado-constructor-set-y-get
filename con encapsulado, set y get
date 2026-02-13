@@ -1,0 +1,84 @@
+public class PRODUCTO {
+
+    // Atributos privados
+    private String nombre;
+    private double precio;
+
+    // Método SET para nombre
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    // Método GET para nombre
+    public String getNombre() {
+        return nombre;
+    }
+
+    // Método SET para precio
+    public void setPrecio(double precio) {
+        if (precio > 0) {
+            this.precio = precio;
+        } else {
+            System.out.println("El precio no puede ser negativo.");
+        }
+    }
+
+}
+
+
+
+
+
+clase principal 
+
+public static void main(String[] args) {
+
+        // Crear instancia sin constructor
+        Producto producto1 = new Producto();
+        Producto producto2 = new Producto();
+
+        // Usamos los métodos SET
+        producto1.setNombre("Laptop");
+        producto1.setPrecio(2500);
+
+        producto2.setNombre("Mouse");
+        producto2.setPrecio(80);
+
+        // Usamos los métodos GET
+        System.out.println("Producto 1: " + producto1.getNombre() +
+                " - Precio: $" + producto1.getPrecio());
+
+        System.out.println("Producto 2: " + producto2.getNombre() +
+                " - Precio: $" + producto2.getPrecio());
+    }
+
+
+    
+
+    private static class Producto {
+        private int precio;
+        private String nombre;
+
+        public void setNombre(String laptop) {
+
+        }
+
+        public void setPrecio(int precio) {
+            this.precio = precio;
+        }
+
+        public int getPrecio() {
+            return precio;
+        }
+
+        public String getNombre() {
+            return nombre;
+        }
+    }
+
+
+
+
+
+
+

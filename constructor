@@ -1,0 +1,50 @@
+public class Carro {
+
+    // Atributos públicos (sin encapsular)
+    public String marca;
+    public int velocidad;
+
+    // Constructor
+    public Carro(String marca, int velocidad) {
+        this.marca = marca;
+        this.velocidad = velocidad;
+    }
+
+    // Método para acelerar
+    public void acelerar(int aumento) {
+        velocidad += aumento;
+    }
+
+    // Método para frenar
+    public void frenar(int disminucion) {
+        velocidad -= disminucion;
+    }
+}
+
+
+
+
+clase principal 
+
+
+
+public class velocidad {
+        public static void main(String[] args) {
+
+            // Crear instancias usando el constructor
+            Carro carro1 = new Carro("Toyota", 60);
+            Carro carro2 = new Carro("Mazda", 80);
+
+            carro1.acelerar(20);
+            carro2.frenar(30);
+
+            System.out.println("Carro 1: " + carro1.marca +
+                    " - Velocidad: " + carro1.velocidad + " km/h");
+
+            System.out.println("Carro 2: " + carro2.marca +
+                    " - Velocidad: " + carro2.velocidad + " km/h");
+        }
+    }
+
+
+

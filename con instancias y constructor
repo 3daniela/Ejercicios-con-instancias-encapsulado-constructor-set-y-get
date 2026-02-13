@@ -1,0 +1,42 @@
+
+public class Casa {
+
+    // Atributos públicos (sin encapsulamiento)
+    public String color;
+    public int habitaciones;
+
+    // Constructor
+    public Casa(String color, int habitaciones) {
+        this.color = color;
+        this.habitaciones = habitaciones;
+    }
+
+    // Método para mostrar información
+    public void mostrarInfo() {
+        System.out.println("Color: " + color +
+                " - Habitaciones: " + habitaciones);
+    }
+}
+
+
+principal class 
+
+class Main {
+    public static void main(String[] args) {
+
+        // Crear instancias usando el constructor
+        Casa casa1 = new Casa("Blanca", 3);
+        Casa casa2 = new Casa("Azul", 5);
+
+        casa1.mostrarInfo();
+        casa2.mostrarInfo();
+
+        // Como no hay encapsulación, podemos modificar directamente
+        casa1.habitaciones = 10;
+
+        System.out.println("Después de modificar:");
+        casa1.mostrarInfo();
+    }
+}
+
+

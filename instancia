@@ -1,0 +1,51 @@
+public class EJERCICIO1 {
+
+    // Atributos públicos 
+    public String marca;
+    public int bateria;
+
+    // Método para usar celular
+    public void usar(int consumo) {
+        bateria -= consumo;
+    }
+
+    // Método para cargar celular
+    public void cargar(int carga) {
+        bateria += carga;
+    }
+}
+
+
+
+clase principal 
+
+package CELULAR;
+
+public class Clase {
+        public static void main(String[] args) {
+
+            // Instancias
+            Celular celular1 = new Celular();
+            Celular celular2 = new Celular();
+
+            celular1.marca = "Samsung";
+            celular1.bateria = 80;
+
+            celular2.marca = "iPhone";
+            celular2.bateria = 50;
+
+            celular1.usar(30);
+            celular2.cargar(20);
+
+            System.out.println("Celular 1: " + celular1.marca +
+                    " - Batería: " + celular1.bateria + "%");
+
+            System.out.println("Celular 2: " + celular2.marca +
+                    " - Batería: " + celular2.bateria + "%");
+        }
+    }
+
+
+
+
+

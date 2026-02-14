@@ -1,0 +1,61 @@
+public class restaurante {
+
+    String nombre;
+    int mesasDisponibles;
+    private Object mostrarEstado;
+
+    //constructor
+    public restaurante(String nombre, int mesasDisponibles) {
+        this.nombre = nombre;
+        this.mesasDisponibles = mesasDisponibles;
+        System.out.println("el restaurante " + nombre + "ha sido abrierto. ");
+    }
+
+    // metodos para reservar mesa
+    public void reservarMesa() {
+        Object cancelarReserva = null;
+        if (mesasDisponibles > 0) {
+            mesasDisponibles--;
+            System.out.println("Mesa reservada. Mesas disponibles: " + mesasDisponibles);
+        } else {
+            System.out.println("No hay mesas disponibles.");
+        }
+
+
+        // Método pra cancelar reserva
+        cancelarReserva = new Object();
+        Object cancelarReserva1 = cancelarReserva;
+        {
+            mesasDisponibles++;
+            System.out.println("Reserva cancelada. Mesas disponibles: " + mesasDisponibles);
+        }
+
+        // Método para mostrar estado
+        Object mostrarEstado1 = mostrarEstado;
+        {
+            System.out.println("Restaurante: " + nombre);
+            System.out.println("Mesas disponibles: " + mesasDisponibles);
+        }
+    }
+}  
+
+
+class principal 
+
+public class principalclass {
+    public static void main(String[] args) {
+        Restaurante miRestaurante = new Restaurante("El Buen Sabor", 5);
+
+        miRestaurante.mostrarEstado();
+        miRestaurante.mostrarEstado();
+        miRestaurante.getClass();
+        miRestaurante.mostrarEstado();
+    }
+
+    private record Restaurante(String elBuenSabor, int i) {
+        public void mostrarEstado() {
+
+        }
+    }
+}
+

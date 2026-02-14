@@ -1,0 +1,36 @@
+public class  vidacotidiana  {
+    // metodo para despertar 
+    public static void despertar(){
+        system.out.println ("despertar a las 7:00 am"); 
+
+    }
+    // metodos para desayunar 
+    public static void desalyunar (){
+        system.out.println ("desayunar a las 7:30 am ");
+    }
+    //metodos para trabajo 
+    public static void trabajar (){
+        system.out.println ("trabajar a las 8:00 am ");
+    }
+    // Método para trabajar
+    public static void trabajar() {
+        System.out.println("Trabajo en mis actividades del día.");
+    }
+
+    // Método para hacer ejercicio
+    public static void hacerEjercicio() {
+        System.out.println("Hago ejercicio por 30 minutos.");
+    }
+
+    // Método para dormir
+    public static void dormir() {
+        System.out.println("Me voy a dormir a las 10:00 PM.");
+    }
+
+    public static void main(String[] args) {
+        despertar();
+        desayunar();
+        trabajar();
+        hacerEjercicio();
+        dormir();
+    }
